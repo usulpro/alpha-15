@@ -5,6 +5,8 @@ import { findBlockRoot } from '@focus-reactive/cms-kit-sanity/sanity-schema-type
 
 import { PageBlock } from '../../../ui-layer/PageBlock';
 import pageBlock from './PageBlock/sa-schema';
+import { CarouselWithTitle } from '../../../ui-layer/CarouselWithTitle';
+import carouselWithTitle from './CarouselWithTitle/sa-schema';
 // HYGEN-IMPORTS-END
 
 // Declare server component prop for nested renderSanityComponent function
@@ -13,5 +15,6 @@ PageBlock.isServerComponent = true;
 
 export const contentBlocksMap: BlocksMap = {
   [findBlockRoot(pageBlock)]: PageBlock,
+  [findBlockRoot(carouselWithTitle)]: CarouselWithTitle,
   // HYGEN-ARRAY-END
 };
